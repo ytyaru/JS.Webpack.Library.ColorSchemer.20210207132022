@@ -1,0 +1,33 @@
+{{query}} {
+    background-color: {{back}};
+    color: {{fore}};
+}
+{{query}} input[type="radio"]:focus + label {
+    border-color: {{shadow}};
+    box-shadow: 0 0 5px {{shadow}};
+}
+{{query}} input[type="radio"]:hover + label,
+{{query}} input[type="radio"] + label:hover {
+    border-color: {{shadow}};
+    box-shadow: 0 0 5px {{shadow}};
+}
+{{query}} input[type="radio"]:checked + label {
+    background-color: {{selectedBack}};
+    color: {{selectedFore}};
+}
+{{query}} input[type="radio"]:disabled + label {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+{{query}} input[type="radio"] {
+    width: 0px;
+    height: 0px;
+    margin: 0;
+    padding: 0;
+}
+{{query}} input[type="radio"] + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+

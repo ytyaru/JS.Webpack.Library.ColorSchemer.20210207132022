@@ -1,0 +1,73 @@
+@charset "utf-8";
+:root {
+    --back-color: white;
+    --fore-color: black;
+    --hover-back-color: blue;
+    --hover-fore-color: white;
+    --focus-back-color: blue;
+    --focus-fore-color: white;
+    --checked-back-color: blue;
+    --checked-fore-color: white;
+    background-color: var(--back-color);
+    color: var(--fore-color);
+}
+input[type="radio"] {
+  width: 0px;
+  height: 0px;
+  margin: 0;
+  padding: 0;
+}
+input[type="radio"] + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+/*ul:has(li input[type=radio] + label)*/
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    font-size: calc(var(--default-LchColorWheel-wheelDiameter) - 16px);
+}
+ul li input[type=radio] + label {
+    border-width: 1px;
+    border-style: solid;
+}
+ul li:first-child label {
+    -moz-border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    border-radius: 50px 0 0 50px;
+    padding: 0px 0 0 4px;
+}
+ul li:last-child label {
+    border-left: 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    border-radius: 0 50px 50px 0;
+    padding: 0px 4px 0 0;
+}
+
+input[type="radio"]:focus + label {
+  border-color: #1589ee;
+/*  border-radius: 50%;*/
+  box-shadow: 0 0 5px #1589ee;
+}
+input[type="radio"]:checked + label {
+  background-color: var(--checked-back-color);
+  color: var(--checked-fore-color);
+}
+input[type="radio"]:disabled,
+input[type="radio"] + label[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

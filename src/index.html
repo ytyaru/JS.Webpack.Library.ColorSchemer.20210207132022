@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>メインカラーを決めることで他の色も自動決定する。</title>
+    <!--
+    <script src="../lib/chroma-2.1.0.min.js"></script>
+    <script src="./colorschemer/FileName.js"></script>
+    <script src="./colorschemer/Loader.js"></script>
+    <script src="./colorschemer/Color2.js"></script>
+    <script src="./colorschemer/Color.js"></script>
+    <script src="./colorschemer/Style.js"></script>
+    <script src="./colorschemer/ColorSchemer.js"></script>
+    -->
+    <script src="./dist/ColorSchemer.js"></script>
+    <script src="./main.js"></script>
+</head>
+<body class="auto-color-radio-button">
+<h1><a href="https://github.com/ytyaru/JS.ColorSetter.20210206090620">メインカラーを決めることで他の色も自動決定する。</a></h1>
+
+<table>
+<tr><td>back</td><td><input id="back-color" type="color" value="#FFFFFF"></td></tr>
+<tr><td>fore</td><td><input id="fore-color" type="color" value="#FFFFFF" disabled></td></tr>
+<tr><td>selectedBack</td><td><input id="selected-back-color" type="color" value="#FFFFFF" disabled></td></tr>
+<tr><td>selectedFore</td><td><input id="selected-fore-color" type="color" value="#FFFFFF" disabled></td></tr>
+<tr><td>shadow</td><td><input id="shadow-color" type="color" value="#FFFFFF" disabled></td></tr>
+</table>
+
+<p>パラグラフ。</p>
+<input type="radio" name="radio-font-size" id="radio-font-size-small">
+<label for="radio-font-size-small">小</label>
+<input type="radio" name="radio-font-size" id="radio-font-size-middle">
+<label for="radio-font-size-middle">中</label>
+<input type="radio" name="radio-font-size" id="radio-font-size-large">
+<label for="radio-font-size-large">大</label>
+
+<input type="radio" name="radio-font-size-disabled" id="radio-font-size-small-disabled" disabled>
+<label for="radio-font-size-small-disabled">無効化</label>
+
+<input type="text" value="text">
+<input type="button" value="button">
+<input type="checkbox" name="checkbox-font-size" id="checkbox-font-size-small">
+<label for="checkbox-font-size-small">小</label>
+<input type="checkbox" name="checkbox-font-size" id="checkbox-font-size-middle">
+<label for="checkbox-font-size-middle">中</label>
+<input type="number">
+<input type="range">
+</body>
+</html>
