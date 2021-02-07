@@ -1,6 +1,9 @@
 module.exports = {
   mode: "production",
-  entry: "./src/ColorSchemer.js",
+  entry: [
+    'regenerator-runtime/runtime',
+    "./src/ColorSchemer.js",
+  ],
   output: {
     library: 'ColorSchemer',
     libraryExport: 'default',
@@ -25,6 +28,7 @@ module.exports = {
                 "@babel/plugin-proposal-class-properties",
                 // async を使えるようにする
                 "@babel/plugin-transform-runtime",
+                "@babel/plugin-transform-async-to-generator",
               ],
             },
           },

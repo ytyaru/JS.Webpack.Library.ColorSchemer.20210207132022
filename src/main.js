@@ -1,3 +1,6 @@
+//import 'core-js/stable';
+import 'core-js';
+import 'regenerator-runtime/runtime';
 window.addEventListener('load', async(event) => {
     const shemer = new ColorSchemer();
     async function getColors(back) {
